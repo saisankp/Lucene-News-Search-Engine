@@ -61,7 +61,7 @@ where entities with <> are required and entities with () are optional depending 
 * `evaluate` scores against a library of queries from the `topics` folder using the Scorer and Searcher classes. We use trec_eval thereafter to get MAP values from these.
 
 ## Setting up trec_eval
-We added trec_eval as a git submodule in this codebase. It should be setup already on our virtual machine, so demonstrators don't have to do anything for this. However, if you are setting up this repository from scratch, do this:
+We added trec_eval as a git submodule in this codebase. If you are setting up this repository from scratch, run these commands:
 
 ```
 git submodule update --init
