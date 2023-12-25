@@ -1,6 +1,6 @@
-# Info Retrieval Project
+# Lucene News Search Engine
 
-This project uses Java 1.8 and Apache Lucene 8.11.2 to index the collection in the `collection` folder which is around 2GB in size, search the generated index and score different search engines using the queries provided by Professor Yvette Graham.
+This project uses Java 1.8 and Apache Lucene 8.11.2 to index the collection in the `collection` folder which is around 2GB in size (containing news articles from various sources), search the generated index and score different search engines using the queries provided.
 
 
 Group Name: **Golden Retrievers**
@@ -14,18 +14,18 @@ Group Name: **Golden Retrievers**
 |       Yifan Zhu        |  18300717  |               Intelligent Systems                |
 
 
-## Highest MAP value so far (with Phase 1 QRel file)
-Highest MAP: **0.3257**
+## Highest MAP value
+Highest MAP: **0.3366**
 
-Search engine combination that gave this MAP: **CustomAnalyzer, LMJelinek-Mercer, QueryParser**
+Search engine combination that gave this MAP: **CustomAnalyzer, LMJelinek-Mercer Similarity and QueryParser**
 
-![MAP Values](results/phase-1/phase-1-qrel-map-values.png)
+![MAP Values](results/phase-2/phase-2-qrel-map-values.png)
 
 
 ## Run
 
 ### Quickest way (just evaluate)
-Just evaluate the code (indexing already done in `/index` if accessing from our virtual machine):
+Just evaluate the code (if indexing is already done in `/index`):
 
 ```
 chmod +x evaluate.sh
@@ -33,7 +33,7 @@ chmod +x evaluate.sh
 ```
 
 ### Longer way (indexing the collection yourself)
-Index the collection yourself first (if you aren't running on our virtual machine or want to check if indexing works):
+Index the collection yourself first:
 
 ```
 chmod +x run.sh
@@ -57,7 +57,7 @@ java -jar target/info-retrieval-project-1.0-SNAPSHOT.jar --operation <index|sear
 where entities with <> are required and entities with () are optional depending on the operation you require, since `similarity` and `parser` are required for `evaluate` and `search` but not `index`. The only requirement for `index` is `analyzer`.
 
 * `index` builds the Lucene index using the Indexer class
-* `search` allows for interactive search using the Searcher class (brought over from our previous assignment, but not the purpose of this assignment since we use topics for queries now, so this option is only here for curiosity purposes)
+* `search` allows for interactive search using the Searcher class (this option is only here for curiosity purposes)
 * `evaluate` scores against a library of queries from the `topics` folder using the Scorer and Searcher classes. We use trec_eval thereafter to get MAP values from these.
 
 ## Setting up trec_eval
