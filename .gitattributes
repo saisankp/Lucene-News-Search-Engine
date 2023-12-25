@@ -1,2 +1,2 @@
-src/* linguist-language=Java
+src/main/java/ie/tcd/goldenretrievers/irproject/* linguist-language=Java
 collection/** linguist-vendored
