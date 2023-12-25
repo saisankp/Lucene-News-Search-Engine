@@ -1,6 +1,6 @@
 # Lucene News Search Engine
 
-This project uses Java 1.8 and Apache Lucene 8.11.2 to index the collection in the `collection` folder which is around 2GB in size (containing news articles from various sources), search the generated index and score different search engines using the queries provided.
+This project uses Java 1.8 and Apache Lucene 8.11.2 to index the collection in the `collection` folder which is around 2GB in size (containing news articles from various sources), search the generated index and score different search engines using the queries from [this qrel file](https://github.com/saisankp/Lucene-News-Search-Engine/blob/main/qrels.assignment2.part1). For details on the implementation, read the [report](https://github.com/saisankp/Lucene-News-Search-Engine/blob/main/report/report.pdf).
 
 
 Group Name: **Golden Retrievers**
@@ -61,7 +61,7 @@ where entities with <> are required and entities with () are optional depending 
 * `evaluate` scores against a library of queries from the `topics` folder using the Scorer and Searcher classes. We use trec_eval thereafter to get MAP values from these.
 
 ## Setting up trec_eval
-We added trec_eval as a git submodule in this codebase. It should be setup already on our virtual machine, so demonstrators don't have to do anything for this. However, if you are setting up this repository from scratch, do this:
+We added trec_eval as a git submodule in this codebase. If you are setting up this repository from scratch, run these commands:
 
 ```
 git submodule update --init
@@ -72,4 +72,4 @@ cd ..
 ```
 
 ### Git issues with trec_eval
-If you are setting up the git submodule for trec_eval for the first time, you may get a trec_eval.diff being tracked which won't go away. Simply make a .gitignore inside the trec_eval folder and put the wildcard '*' inside. This is already handled for our virtual machine so demonstrators don't need to follow this.
+If you are setting up the git submodule for trec_eval for the first time, you may get a trec_eval.diff being tracked which won't go away. Simply make a .gitignore inside the trec_eval folder and put the wildcard '*' inside.
