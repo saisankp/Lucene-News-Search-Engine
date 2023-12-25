@@ -72,4 +72,4 @@ cd ..
 ```
 
 ### Git issues with trec_eval
-If you are setting up the git submodule for trec_eval for the first time, you may get a trec_eval.diff being tracked which won't go away. Simply make a .gitignore inside the trec_eval folder and put the wildcard '*' inside. This is already handled for our virtual machine so demonstrators don't need to follow this.
+If you are setting up the git submodule for trec_eval for the first time, you may get a trec_eval.diff being tracked which won't go away. Simply make a .gitignore inside the trec_eval folder and put the wildcard '*' inside.
