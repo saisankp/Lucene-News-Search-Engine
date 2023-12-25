@@ -1,6 +1,6 @@
 # Lucene News Search Engine
 
-This project uses Java 1.8 and Apache Lucene 8.11.2 to index the collection in the `collection` folder which is around 2GB in size (containing news articles from various sources), search the generated index and score different search engines using the queries provided.
+This project uses Java 1.8 and Apache Lucene 8.11.2 to index the collection in the `collection` folder which is around 2GB in size (containing news articles from various sources), search the generated index and score different search engines using the queries from [this qrel file](https://github.com/saisankp/Lucene-News-Search-Engine/blob/main/qrels.assignment2.part1). For details on the implementation, read the [report](https://github.com/saisankp/Lucene-News-Search-Engine/blob/main/report/report.pdf).
 
 
 Group Name: **Golden Retrievers**
